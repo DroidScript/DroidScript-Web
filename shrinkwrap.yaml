@@ -5,6 +5,7 @@ dependencies:
   console-ten: 0.0.5
   editions: 2.1.3
   errlop: 1.1.1
+  gm: 1.23.1
   node-ipc: 9.1.1
   watchr: 4.1.0
   websocket: 1.0.28
@@ -35,6 +36,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-eJv4pLLufP3g5kcZry0j6WXpIbzYw9GUB4mVJZno9wfwiBxbizTnHCw3VJb07cBihbFX48Y7oSrW9y+gt4glyw==
+  /array-parallel/0.1.3:
+    dev: false
+    resolution:
+      integrity: sha1-j3hTCJJu1apHjEfmTRszS2wMlH0=
+  /array-series/0.1.5:
+    dev: false
+    resolution:
+      integrity: sha1-3103v8XC7wdV4qpPkv6ufUtaly8=
   /better-sqlite3/4.2.0:
     dependencies:
       bindings: 1.4.0
@@ -71,12 +80,25 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ELUtzFmlGB/LzS4HI5D3h6aGhkI=
+  /cross-spawn/4.0.2:
+    dependencies:
+      lru-cache: 4.1.5
+      which: 1.3.1
+    dev: false
+    resolution:
+      integrity: sha1-e5JHYhwjrf3ThWAEqCPL45dCTUE=
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
     dev: false
     resolution:
       integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+  /debug/3.2.6:
+    dependencies:
+      ms: 2.1.1
+    dev: false
+    resolution:
+      integrity: sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
   /eachr/3.2.0:
     dependencies:
       editions: 1.3.4
@@ -143,6 +165,17 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-LzDo3Fpa30FLIBsh6DCDnMN1KW2g4QKkqKmejlImgWY67dDFPX/x9Kh/op/GK522DchQXEvDi/wD48HKW49XOQ==
+  /gm/1.23.1:
+    dependencies:
+      array-parallel: 0.1.3
+      array-series: 0.1.5
+      cross-spawn: 4.0.2
+      debug: 3.2.6
+    dev: false
+    engines:
+      node: '>= 0.10.0'
+    resolution:
+      integrity: sha1-Lt7rlYCE0PjqeYjl2ZWxx9/BR3c=
   /graceful-fs/4.1.15:
     dev: false
     resolution:
@@ -173,6 +206,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
+  /isexe/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
   /js-message/1.0.5:
     dev: false
     engines:
@@ -191,10 +228,21 @@ packages:
     dev: false
     resolution:
       integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
+  /lru-cache/4.1.5:
+    dependencies:
+      pseudomap: 1.0.2
+      yallist: 2.1.2
+    dev: false
+    resolution:
+      integrity: sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
   /ms/2.0.0:
     dev: false
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+  /ms/2.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
   /nan/2.12.1:
     dev: false
     resolution:
@@ -209,6 +257,10 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-FAyICv0sIRJxVp3GW5fzgaf9jwwRQxAKDJlmNFUL5hOy+W4X/I5AypyHoq0DXXbo9o/gt79gj++4cMr4jVWE/w==
+  /pseudomap/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
   /readdir-cluster/1.1.0:
     dependencies:
       editions: 1.3.4
@@ -314,12 +366,23 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-00y/20/80P7H4bCYkzuuvvfDvh+dgtXi5kzDf3UcZwN6boTYaKvsrtZ5lIYm1Gsg48siMErd9M4zjSYfYFHTrA==
+  /which/1.3.1:
+    dependencies:
+      isexe: 2.0.0
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==
   /yaeti/0.0.6:
     dev: false
     engines:
       node: '>=0.10.32'
     resolution:
       integrity: sha1-8m9ITXJoTPQr7ft2lwqhYI+/lXc=
+  /yallist/2.1.2:
+    dev: false
+    resolution:
+      integrity: sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -330,6 +393,7 @@ specifiers:
   console-ten: ^0.0.5
   editions: ^2.1.3
   errlop: ^1.1.1
+  gm: ^1.23.1
   node-ipc: ^9.1.1
   watchr: ^4.1.0
   websocket: ^1.0.28
